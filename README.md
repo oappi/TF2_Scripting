@@ -44,7 +44,7 @@ Scripts within this subsystem make use of the `behav_cleanup` alias to reduce th
 - `behav_SpamScout` (`space`) calls out Battlecry when jumping (frequency limited) (e.g. for Halloween items)
 
 ###MvM
-MvM class scripts assume that the loadout is in slot A, and assign some controls based on expected loadout.
+MvM class scripts assume that the loadout is in slot A, assign some controls based on expected loadout, and may use behaviours.
 - `mvm_class_redir` provides the redirects to the `mvm_` set of class scripts
-- `mvm_[class]` scripts are the set of mvm scripts for standard TF2
+- `mvm_[class]` scripts are the set of scripts for the MvM game mode
 - `mvm_rules` provides aliases for some common phrases
