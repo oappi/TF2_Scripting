@@ -1,6 +1,17 @@
 # TF2_Scripting
 Team Fortress 2: Scripts
 
+> **If you intend to use these scripts, please make sure that you read (at the very least) the `core_controls` script. These reflect the controls I use, which are not the defaults. Once executed, any bindings you had that it makes use of will be lost.**
+>
+> (If you make any changes to these bindings, also change (or do not use) the files with the original key listed in the packages listed in the Subsystem Documentation section.)
+
+A repository for the raw TF2 scripts. It is recommended to compile the subsystem folders into [`VPK`][link-VPK] files before using them as there are many individual files, many of which which will not need to change.
+These subsystem vpk files are then installed like any other TF2 mod, into the `steamapps\common\Team Fortress 2\tf\custom` folder.
+
+(Personally I have a set of batch files which handle the packaging and installation, but these are not suitable for release into the wild. [Here][link-VPK], or a search engine of your choice, will tell you how to compile the subsystem folders into vpk files.)
+
+[link-VPK]:https://developer.valvesoftware.com/wiki/VPK
+
 ##Subsystems
 | Name          | Purpose       |
 | ------------- | ------------- |
@@ -44,7 +55,9 @@ Scripts within this subsystem make use of the `behav_cleanup` alias to reduce th
 - `behav_SpamScout` (`space`) calls out Battlecry when jumping (frequency limited) (e.g. for Halloween items)
 
 ###MvM
+> These scripts make assumptions about the default bindings, as there is no framework to provide a level of indirection.
+
 MvM class scripts assume that the loadout is in slot A, assign some controls based on expected loadout, and may use behaviours.
 - `mvm_class_redir` provides the redirects to the `mvm_` set of class scripts
-- `mvm_[class]` scripts are the set of scripts for the MvM game mode
+- `mvm_[class]` (`q`)  scripts are the set of scripts for the MvM game mode
 - `mvm_rules` provides aliases for some common phrases
